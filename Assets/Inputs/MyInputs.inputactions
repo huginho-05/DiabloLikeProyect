@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "MyInputs",
+    "maps": [
+        {
+            "name": "Gameplay",
+            "id": "f14c5414-0cd8-472f-96a4-54adc47f59eb",
+            "actions": [
+                {
+                    "name": "Click",
+                    "type": "Button",
+                    "id": "65857f04-694c-46a1-aaf1-4f7569004860",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f56ef776-58a6-4bff-b55a-d3ed91b8cc5d",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
