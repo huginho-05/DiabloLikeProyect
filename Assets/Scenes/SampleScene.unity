@@ -239,9 +239,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 210936030}
+  - component: {fileID: 210936033}
   - component: {fileID: 210936031}
   - component: {fileID: 210936032}
-  - component: {fileID: 210936033}
   m_Layer: 0
   m_Name: Patriarca
   m_TagString: Untagged
