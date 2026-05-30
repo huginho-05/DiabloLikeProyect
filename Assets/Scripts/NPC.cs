@@ -14,12 +14,7 @@ public class NPC : Interactuable
 
     public override void Interact(GameObject interactor)
     {
-        transform.DOLookAt(interactor.transform.position, 2f, AxisConstraint.Y).OnComplete(DoInteraction);
-    }
-
-    private void DoInteraction()
-    {
         Debug.Log("Empieza el diálogo");
-        //DialogueSystem.Instance.StartDialogue(npcDialogue);
     }
+    
 }
