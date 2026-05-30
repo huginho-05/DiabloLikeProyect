@@ -18,6 +18,7 @@ public class ThirdPersonController : MonoBehaviour
         private float currentSpeed;
         private float speedVelocity;
         private float rotationVelocity;
+        private bool isAiming;
 
         public PlayerInput PlayerInput { get; private set; }
 
@@ -33,6 +34,8 @@ public class ThirdPersonController : MonoBehaviour
         {
             PlayerInput.actions["Move"].canceled += UpdateMovement;
             PlayerInput.actions["Move"].performed += UpdateMovement;
+            PlayerInput.actions["Click"].performed += StartAiming;
+            PlayerInput.actions["Click"].canceled += StopAiming;
         }
 
         private void UpdateMovement(InputAction.CallbackContext ctx)
@@ -74,5 +77,17 @@ public class ThirdPersonController : MonoBehaviour
             
             // Actualizar animación
             anim.SetFloat("Speed", currentSpeed / movementSpeed);
+        }
+        
+        private void StartAiming(InputAction.CallbackContext ctx)
+        {
+            isAiming = true;
+            anim.SetBool("IsAiming", true);
+        }
+
+        private void StopAiming(InputAction.CallbackContext ctx)
+        {
+            isAiming = false;
+            anim.SetBool("IsAiming", false);
         }
 }
